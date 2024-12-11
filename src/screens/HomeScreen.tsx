@@ -12,7 +12,7 @@ export default function HomeScreen() {
             <Slider 
                 movies={nowPlaying.movies} 
                 height={100} 
-                finpagina={loadNextPage} // Pass the loadNextPage function
+                finpagina={loadNextPage}
             />
             {loading && <Text>Cargando...</Text>}
         </View>

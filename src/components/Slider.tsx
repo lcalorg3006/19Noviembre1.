@@ -8,13 +8,13 @@ interface Movies {
   finpagina: () => void; // Add this prop
 }
 
-export default function Slider({ movies, height, finpagina: onEndReached }: Movies) {
+export default function Slider({ movies, height, finpagina: finpagina }: Movies) {
   const handleScroll = (event: any) => {
     const { contentOffset, layoutMeasurement, contentSize } = event.nativeEvent;
     const isCloseToBottom = layoutMeasurement.height + contentOffset.y >= contentSize.height - 20; // 20 is a buffer
 
     if (isCloseToBottom) {
-      onEndReached(); // Call the function when close to bottom
+      finpagina(); 
     }
   };
 
@@ -23,8 +23,8 @@ export default function Slider({ movies, height, finpagina: onEndReached }: Movi
       <ScrollView 
         style={styles.contenedor} 
         horizontal={true} 
-        onScroll={handleScroll} // Attach the scroll handler
-        scrollEventThrottle={16} // Throttle the scroll event
+        onScroll={handleScroll} 
+        scrollEventThrottle={16} 
       >
         {movies.map((item) => (
           <Image 
