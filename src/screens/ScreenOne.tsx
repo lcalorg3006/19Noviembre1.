@@ -11,7 +11,7 @@ export default function ScreenOne() {
             <Text>Screen One</Text>
             <Slider 
                 movies={nowPlaying.movies} 
-                height={200} // Different height
+                height={600}
                 finpagina={loadNextPage} 
             />
             {loading && <Text>Cargando...</Text>}
@@ -21,8 +21,9 @@ export default function ScreenOne() {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    flex: 10,
     justifyContent: 'center',
     alignItems: 'center',
   },
 });
+
