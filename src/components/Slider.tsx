@@ -43,7 +43,7 @@ export default function Slider({ movies, height, finpagina: finpagina }: Movies)
 
 const styles = StyleSheet.create({
   contenedor: {
-    height: 300,
+    height: 301,
   },
   imagen: {
     width: 200,
