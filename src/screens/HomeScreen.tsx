@@ -4,6 +4,7 @@ import { useMovies } from '../hooks/useMovies';
 import Slider from '../components/Slider';
 
 export default function HomeScreen() {
+    // obtiene el estado de las peliculas
     const { nowPlaying, loading, loadNextPage } = useMovies();
 
     return (
